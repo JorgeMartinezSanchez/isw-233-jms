@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* improves drag feeling */
+}
+
+body {
+    background: #1e1e2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* prevents scrolling on body */
+    position: fixed; /* ensures full screen coverage */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* main canvas – now truly full screen */
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: white;
+    overflow: hidden; /* keeps circles contained */
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* base circles (background decoration) – scaled proportionally */
+.bg-circles {
+    width: 1805px;
+    height: 466px;
+    left: -221px;
+    top: 719px;
+    position: absolute;
+    transform: scale(1);
+    transform-origin: left top;
+}
+
+/* profile picture & name — static but repositioned for full screen */
+.profile-pic-bg {
+    width: 236px;
+    height: 232px;
+    left: 67px;
+    top: 25px;
+    position: absolute;
+    background: #D9D9D9;
+    border-radius: 9999px;
+}
+
+.profile-img {
+    width: 270px;
+    height: 237px;
+    left: 49px;
+    top: 19px;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.name-title {
+    width: 952px;
+    height: 97px;
+    left: 388px;
+    top: 92px;
+    position: absolute;
+    color: black;
+    font-size: 79px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    line-height: 0.95;
+}
+
+/* ------------------------------------------------------------
+   CARRUSEL CONTAINER – now responsive and centered
+------------------------------------------------------------ */
+.carousel-wrapper {
+    width: calc(100% - 258px); /* maintains original proportions */
+    max-width: 1182px;
+    left: 129px;
+    top: 162px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 90px;
+    cursor: grab;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1400px) {
+    .name-title {
+        font-size: 60px;
+        width: auto;
+        left: 350px;
+        top: 100px;
+    }
+    
+    .carousel-wrapper {
+        width: calc(100% - 200px);
+        left: 100px;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .name-title {
+        font-size: 50px;
+        left: 300px;
+        top: 110px;
+    }
+    
+    .profile-pic-bg, .profile-img {
+        transform: scale(0.9);
+        left: 40px;
+    }
+    
+    .carousel-wrapper {
+        width: calc(100% - 160px);
+        left: 80px;
+        gap: 40px;
+    }
+}
+
+@media (max-height: 800px) {
+    .bg-circles {
+        top: 650px;
+    }
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* each card – maintains original dimensions but scales if needed */
+.card {
+    flex: 0 0 auto;
+    width: 1136px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: content-box;
+}
+
+/* Scale cards on smaller screens */
+@media (max-width: 1400px) {
+    .card {
+        width: 900px;
+        transform-origin: left center;
+    }
+    
+    .card-title {
+        font-size: 36px !important;
+    }
+    
+    .card-desc {
+        font-size: 28px !important;
+    }
+    
+    .card img {
+        transform: scale(0.9);
+    }
+    
+    .idiomas-block {
+        font-size: 28px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 750px;
+    }
+    
+    .card-title {
+        font-size: 32px !important;
+    }
+    
+    .card-desc {
+        font-size: 24px !important;
+    }
+    
+    .card img {
+        transform: scale(0.8);
+    }
+    
+    .idiomas-block {
+        font-size: 24px !important;
+    }
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+    color: black;
+    font-size: 44px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    color: black;
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    width: 100%;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.idiomas-block {
+    color: black;
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card img {
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* extra circle background decorative — keep but make them responsive */
+.circle-1 { 
+    width: 490px; 
+    height: 456px; 
+    left: 479px; 
+    top: 138px; 
+    position: absolute; 
+    background: #A4DCAF; 
+    border-radius: 9999px; 
+}
+
+.circle-2 { 
+    width: 490px; 
+    height: 456px; 
+    left: 895px; 
+    top: 74px; 
+    position: absolute; 
+    background: #A4DCCD; 
+    border-radius: 9999px; 
+}
+
+.circle-3 { 
+    width: 637px; 
+    height: 604px; 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+    background: #90C4CC; 
+    border-radius: 9999px; 
+}
+
+.circle-4 { 
+    width: 637px; 
+    height: 604px; 
+    left: 1296px; 
+    top: 0px; 
+    position: absolute; 
+    background: #99A0CD; 
+    border-radius: 9999px; 
+}
+
+/* dragged state */
+.carousel-wrapper.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+/* Ensure circles scale appropriately on smaller screens */
+@media (max-width: 1600px) {
+    .circle-1, .circle-2, .circle-3, .circle-4 {
+        transform: scale(0.8);
+    }
+    
+    .circle-1 { left: 350px; }
+    .circle-2 { left: 750px; }
+    .circle-4 { left: 1000px; }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .carousel-wrapper {
+        cursor: default;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 800px) {
+    .profile-pic-bg, .profile-img {
+        transform: scale(0.7);
+        top: 10px;
+    }
+    
+    .name-title {
+        top: 50px;
+        font-size: 50px;
+    }
+    
+    .carousel-wrapper {
+        top: 120px;
+    }
+    
+    .bg-circles {
+        top: 600px;
+    }
+}

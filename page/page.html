@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Martínez · Carrusel de opacidad dinámica</title>
+    <!-- Roboto & Roboto Slab fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="canvas">
+        <!-- profile image & background -->
+        <div class="profile-pic-bg"></div>
+        <img class="profile-img" src="https://placehold.co/270x237" alt="profile placeholder">
+        <div class="name-title">Jorge Martínez Sánchez</div>
+
+        <!-- big background circles (exact original positions) -->
+        <div class="bg-circles">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+        </div>
+
+        <!-- =============== CARRUSEL (DRAGGABLE + OPACITY BY PROXIMITY) =============== -->
+        <div id="carousel" class="carousel-wrapper">
+            <!-- CARD 1 - Educación (first) with absolute positioned img 145x145 -->
+            <div class="card" data-original-opacity="1.0">
+                <div class="card-content" style="position: relative; width: 1136px;">
+                    <div class="card-title" style="height: 75px;">Educación</div>
+                    <div class="card-desc" style="height: 96px;">Me gradué como Ingeniero de Software en la Universidad Católica Boliviana "San Pablo".</div>
+                    <img style="width: 145px; height: 145px; position: absolute; left: 496px; top: 171px;" src="https://placehold.co/145x145" alt="edu icon">
+                </div>
+            </div>
+
+            <!-- CARD 2 - Experiencia (first) -->
+            <div class="card" style="padding-top: 56px; padding-bottom: 56px;">
+                <div class="card-content" style="width: 100%;">
+                    <div class="card-title" style="height: 58px; display: flex; align-items: center; justify-content: center;">Experiencia</div>
+                    <div class="card-desc" style="height: 98px;">Tuve experiencia participando en el Space Apps del 2024.</div>
+                    <img style="width: 172px; height: 171px; margin-top: 10px;" src="https://placehold.co/172x171" alt="exp icon">
+                </div>
+            </div>
+
+            <!-- CARD 3 - Habilidades (first) -->
+            <div class="card" style="padding-top: 112px; padding-bottom: 112px;">
+                <div class="card-content">
+                    <div class="card-title" style="height: 75px;">Habilidades</div>
+                    <div class="card-desc" style="height: 53px;">Puedo manejar los siguientes lenguajes de programación:</div>
+                    <div class="icon-row">
+                        <img style="width: 119px; height: 119px;" src="https://placehold.co/119x119" alt="lang1">
+                        <img style="width: 130px; height: 145px;" src="https://placehold.co/130x145" alt="lang2">
+                        <img style="width: 122px; height: 122px;" src="https://placehold.co/122x122" alt="lang3">
+                        <img style="width: 124px; height: 140px;" src="https://placehold.co/124x140" alt="lang4">
+                    </div>
+                    <div class="idiomas-block" style="height: 147px; margin-top: 10px;">Idiomas:<br/>+ 🇺🇸 Inglés<br/>+ 🇪🇸 Español</div>
+                </div>
+            </div>
+
+            <!-- CARD 4 - Hobbies (first) -->
+            <div class="card" style="padding-top: 168px; padding-bottom: 168px;">
+                <div class="card-content">
+                    <div class="card-title" style="height: 75px;">Hobbies</div>
+                    <div class="card-desc" style="height: 62px;">Suelo realizar dibujo en digital.</div>
+                    <img style="width: 227px; height: 227px; margin-top: 10px;" src="https://placehold.co/227x227" alt="hobby">
+                </div>
+            </div>
+
+            <!-- CARD 5 - Educación (repeat) -->
+            <div class="card">
+                <div class="card-content" style="position: relative; width: 1136px;">
+                    <div class="card-title" style="height: 75px;">Educación</div>
+                    <div class="card-desc" style="height: 96px;">Me gradué como Ingeniero de Software en la Universidad Católica Boliviana "San Pablo".</div>
+                    <img style="width: 145px; height: 145px; position: absolute; left: 496px; top: 171px;" src="https://placehold.co/145x145" alt="edu icon 2">
+                </div>
+            </div>
+
+            <!-- CARD 6 - Experiencia (repeat) -->
+            <div class="card" style="padding-top: 56px; padding-bottom: 56px;">
+                <div class="card-content">
+                    <div class="card-title" style="height: 58px;">Experiencia</div>
+                    <div class="card-desc" style="height: 98px;">Tuve experiencia participando en el Space Apps del 2024.</div>
+                    <img style="width: 172px; height: 171px;" src="https://placehold.co/172x171" alt="exp icon 2">
+                </div>
+            </div>
+
+            <!-- CARD 7 - Habilidades (repeat) -->
+            <div class="card" style="padding-top: 112px; padding-bottom: 112px;">
+                <div class="card-content">
+                    <div class="card-title" style="height: 75px;">Habilidades</div>
+                    <div class="card-desc" style="height: 53px;">Puedo manejar los siguientes lenguajes de programación:</div>
+                    <div class="icon-row">
+                        <img style="width: 119px; height: 119px;" src="https://placehold.co/119x119" alt="lang1b">
+                        <img style="width: 130px; height: 145px;" src="https://placehold.co/130x145" alt="lang2b">
+                        <img style="width: 122px; height: 122px;" src="https://placehold.co/122x122" alt="lang3b">
+                        <img style="width: 124px; height: 140px;" src="https://placehold.co/124x140" alt="lang4b">
+                    </div>
+                    <div class="idiomas-block" style="height: 147px;">Idiomas:<br/>+ 🇺🇸 Inglés<br/>+ 🇪🇸 Español</div>
+                </div>
+            </div>
+
+            <!-- CARD 8 - Hobbies (repeat) -->
+            <div class="card" style="padding-top: 168px; padding-bottom: 168px;">
+                <div class="card-content">
+                    <div class="card-title" style="height: 75px;">Hobbies</div>
+                    <div class="card-desc" style="height: 62px;">Suelo realizar dibujo en digital.</div>
+                    <img style="width: 227px; height: 227px;" src="https://placehold.co/227x227" alt="hobby 2">
+                </div>
+            </div>
+        </div>
+        <!-- =============== FIN CARRUSEL =============== -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
