@@ -1,0 +1,13 @@
+install the docker image on a certain directory (where the dockerfile is obviously).
+
+then open two windows of cmd or powershell
+
+move to the directory where you installed this folder with cd in both
+
+then type this in both:
+
+docker run -it --rm --name [SERVER_CONTAINER_NAME] --network [NETWORK_NAME] [IMAGE_NAME] python3 seabattle.py 1234 5000
+
+docker run -it --rm --name [CLIENT_CONTAINER_NAME] --network [NETWORK_NAME] [IMAGE_NAME] python3 seabattle.py 5678 [SERVER_CONTAINER_NAME] 5000
+
+And enjoy the game!
