@@ -1,14 +1,10 @@
-/* Global Styles */
-/*@import './vendor/normalize.css';*/
 
-/* Blocks */
 @import './blocks/profile/profile.css';
 @import './blocks/carousel/carousel.css';
 @import './blocks/card/card.css';
 @import './blocks/conctact/contact.css';
 @import './blocks/decorative-circles/decorative-circles.css';
 
-/* Global variables */
 :root {
     --font-roboto: 'Roboto', sans-serif;
     --font-roboto-slab: 'Roboto Slab', serif;
@@ -32,7 +28,7 @@ body {
     margin: 0;
     overflow-y: auto;
     position: relative;
-    font-family: var(--font-roboto); /* Fuente por defecto para todo el body */
+    font-family: var(--font-roboto); 
 }
 
 .page {
