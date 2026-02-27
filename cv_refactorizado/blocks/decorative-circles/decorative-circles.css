@@ -1,0 +1,65 @@
+.decorative-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decorative-circles__circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.decorative-circles__circle--1 {
+    width: 637px;
+    height: 604px;
+    /* Juega con 'top' y 'left' para moverlo. Ejemplo: top: 0 lo pone arriba del todo */
+    top: -100px; 
+    left: -150px;
+    background: #A4DCAF;
+}
+
+.decorative-circles__circle--2 {
+    width: 490px;
+    height: 456px;
+    /* Por ejemplo, este lo ponemos por el medio de la página a la derecha */
+    top: 30%; 
+    right: -50px;
+    background: #A4DCCD;
+}
+
+.decorative-circles__circle--3 {
+    width: 550px;
+    height: 520px;
+    /* Este lo bajamos un poco más, hacia el lado izquierdo */
+    top: 60%; 
+    left: -100px;
+    background: #90C4CC;
+}
+
+.decorative-circles__circle--4 {
+    width: 400px;
+    height: 380px;
+    /* Y este casi al final de la página */
+    top: 85%; 
+    right: 10%;
+    background: #99A0CD;
+}
+
+@media (max-width: 1600px) {
+    .decorative-circles__circle--1 { width: 500px; height: 480px; left: -150px; }
+    .decorative-circles__circle--2 { width: 400px; height: 370px; }
+    .decorative-circles__circle--3 { width: 450px; height: 430px; }
+    .decorative-circles__circle--4 { width: 350px; height: 330px; }
+}
+
+@media (max-width: 1200px) {
+    .decorative-circles__circle--1 { width: 400px; height: 380px; }
+    .decorative-circles__circle--2 { width: 320px; height: 300px; }
+    .decorative-circles__circle--3 { width: 360px; height: 340px; }
+    .decorative-circles__circle--4 { width: 280px; height: 260px; }
+}

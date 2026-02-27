@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum vitae</title>
+    <!-- Roboto & Roboto Slab fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Decorative Circles (fondo general) -->
+        <div class="decorative-circles">
+            <div class="decorative-circles__circle decorative-circles__circle--1"></div>
+            <div class="decorative-circles__circle decorative-circles__circle--2"></div>
+            <div class="decorative-circles__circle decorative-circles__circle--3"></div>
+            <div class="decorative-circles__circle decorative-circles__circle--4"></div>
+        </div>
+
+        <!-- Main Content Wrapper (permite scroll vertical) -->
+        <div class="content-wrapper">
+            <!-- Profile Block -->
+            <div class="profile">
+                <div class="profile__avatar-bg"></div>
+                <img class="profile__image" src="./../images/aislop.png" alt="Jorge Martínez Sánchez">
+                <h1 class="profile__name">Jorge Martínez Sánchez</h1>
+            </div>
+
+            <!-- Carousel Block -->
+            <div class="carousel" id="carousel">
+                <!-- Education Card -->
+                <div class="card">
+                    <div class="card__content">
+                        <h2 class="card__title">Educación</h2>
+                        <p class="card__description">Me gradué como Ingeniero de Software en la Universidad Católica Boliviana "San Pablo".</p>
+                        <img class="card__icon" style="width: 145px; height: 145px;" src="./../images/ed.png" alt="edu icon">
+                    </div>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="card">
+                    <div class="card__content">
+                        <h2 class="card__title">Experiencia</h2>
+                        <p class="card__description">Tuve experiencia participando en el Space Apps del 2024.</p>
+                        <img class="card__icon" style="width: 172px; height: 171px;" src="./../images/exp.png" alt="exp icon">
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="card">
+                    <div class="card__content">
+                        <h2 class="card__title">Habilidades</h2>
+                        <p class="card__description">Puedo manejar los siguientes lenguajes de programación:</p>
+                        <div class="card__skills-row">
+                            <img style="width: 119px; height: 119px;" src="./../images/cpp.png" alt="C++">
+                            <img style="width: 130px; height: 145px;" src="./../images/cslogo.png" alt="C#">
+                            <img style="width: 122px; height: 122px;" src="./../images/Python.png" alt="Python">
+                            <img style="width: 124px; height: 140px;" src="./../images/Ts.png" alt="TypeScript">
+                        </div>
+                        <div class="card__languages">
+                            <p>Idiomas:</p>
+                            <p>+ 🇺🇸 Inglés</p>
+                            <p>+ 🇪🇸 Español</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies Card -->
+                <div class="card">
+                    <div class="card__content">
+                        <h2 class="card__title">Hobbies</h2>
+                        <p class="card__description">Suelo realizar dibujo en digital.</p>
+                        <img class="card__icon" style="width: 227px; height: 227px;" src="./../images/tablet.png" alt="hobby">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Block (AHORA ESTÁ DEBAJO) -->
+            <div class="contact">
+                <div class="contact__circle contact__circle--1"></div>
+                <div class="contact__circle contact__circle--2"></div>
+                <div class="contact__circle contact__circle--3"></div>
+                <div class="contact__circle contact__circle--4"></div>
+                
+                <h2 class="contact__title">Mis Contactos</h2>
+                <div class="contact__icons">
+                    <a href="https://wa.me/59168211104" target="_blank">
+                        <img class="contact__icon" src="./../images/wssp.png" alt="WhatsApp de Jorge" />
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/jorge-mart%C3%ADnez-s%C3%A1nchez-609ab8300/" target="_blank">
+                        <img class="contact__icon" src="./../images/linkedln.png" alt="LinkedIn de Jorge" />
+                    </a>
+
+                    <a href="https://www.instagram.com/jorge.mtzsa05/" target="_blank">
+                        <img class="contact__icon" src="./../images/ig.png" alt="Instagram de Jorge" />
+                    </a>
+                </div>
+                <div class="contact__phone">+561 68211104</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

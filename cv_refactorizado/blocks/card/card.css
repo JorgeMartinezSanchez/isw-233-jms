@@ -1,0 +1,119 @@
+.card {
+    flex: 0 0 auto;
+    width: 1136px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    font-family: var(--font-roboto);
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: content-box;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.card__title {
+    text-align: center;
+    color: black;
+    font-size: 44px;
+    font-family: var(--font-roboto-slab);
+    font-weight: 500;
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.card__description {
+    color: black;
+    font-size: 36px;
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    word-wrap: break-word;
+    width: 100%;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 90px;
+}
+
+.card__skills-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.card__languages {
+    color: black;
+    font-size: 36px;
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.card__icon {
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .card {
+        width: 900px;
+        transform-origin: left center;
+    }
+    
+    .card__title {
+        font-size: 36px !important;
+    }
+    
+    .card__description {
+        font-size: 28px !important;
+    }
+    
+    .card img {
+        transform: scale(0.9);
+    }
+    
+    .card__languages {
+        font-size: 28px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 750px;
+    }
+    
+    .card__title {
+        font-size: 32px !important;
+    }
+    
+    .card__description {
+        font-size: 24px !important;
+    }
+    
+    .card img {
+        transform: scale(0.8);
+    }
+    
+    .card__languages {
+        font-size: 24px !important;
+    }
+}
