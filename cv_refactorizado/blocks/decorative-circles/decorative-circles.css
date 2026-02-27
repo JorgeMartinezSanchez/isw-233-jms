@@ -17,7 +17,6 @@
 .decorative-circles__circle--1 {
     width: 637px;
     height: 604px;
-    /* Juega con 'top' y 'left' para moverlo. Ejemplo: top: 0 lo pone arriba del todo */
     top: -100px; 
     left: -150px;
     background: #A4DCAF;
@@ -26,7 +25,6 @@
 .decorative-circles__circle--2 {
     width: 490px;
     height: 456px;
-    /* Por ejemplo, este lo ponemos por el medio de la página a la derecha */
     top: 30%; 
     right: -50px;
     background: #A4DCCD;
@@ -35,7 +33,6 @@
 .decorative-circles__circle--3 {
     width: 550px;
     height: 520px;
-    /* Este lo bajamos un poco más, hacia el lado izquierdo */
     top: 60%; 
     left: -100px;
     background: #90C4CC;
@@ -44,7 +41,6 @@
 .decorative-circles__circle--4 {
     width: 400px;
     height: 380px;
-    /* Y este casi al final de la página */
     top: 85%; 
     right: 10%;
     background: #99A0CD;

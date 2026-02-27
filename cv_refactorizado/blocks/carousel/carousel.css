@@ -1,7 +1,7 @@
 .carousel {
     width: calc(100% - 258px);
     max-width: 1182px;
-    margin: 250px auto 0; /* Centrado con margen superior */
+    margin: 250px auto 0;
     position: relative;
     display: flex;
     justify-content: flex-start;

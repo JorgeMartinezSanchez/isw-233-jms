@@ -4,7 +4,6 @@
     const carousel = document.getElementById('carousel');
     const cards = Array.from(document.querySelectorAll('.card'));
 
-    // --- DRAG TO SCROLL ---
     let isDragging = false;
     let startX, scrollLeft;
 
@@ -40,7 +39,6 @@
     window.addEventListener('mouseup', dragEnd);
     window.addEventListener('touchend', dragEnd);
 
-    // --- OPACITY BASED ON PROXIMITY TO CENTER ---
     function updateOpacities() {
         const carouselRect = carousel.getBoundingClientRect();
         const carouselCenterX = carouselRect.left + carouselRect.width / 2;
@@ -77,7 +75,6 @@
         requestAnimationFrame(updateOpacities);
     });
 
-    // Initial update
     setTimeout(() => {
         updateOpacities();
         carousel.style.scrollBehavior = 'smooth';

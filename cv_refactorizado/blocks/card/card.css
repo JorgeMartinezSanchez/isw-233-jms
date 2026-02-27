@@ -72,7 +72,6 @@
     border-radius: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1400px) {
     .card {
         width: 900px;
