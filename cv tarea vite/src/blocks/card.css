@@ -1,0 +1,20 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* ESTA ES LA CLAVE: Centra horizontalmente en un 'row' */
+    align-items: center;     /* Centra verticalmente */
+    
+    /* Opcional: Dale una altura mínima para que la tarjeta tenga buen tamaño 
+       y el centrado vertical sea notorio */
+    min-height: 400px;
+    background-color: aliceblue;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Al ser 'column', align-items centra horizontalmente sus hijos (textos, imágenes) */
+    justify-content: center; /* Centra verticalmente los hijos en la columna */
+    text-align: center;      /* Asegura que los textos largos también se centren */
+    gap: 15px;               /* Opcional: añade espacio uniforme entre el título, descripción e imagen */
+}

@@ -1,0 +1,129 @@
+@import './blocks/profile.css';
+@import './blocks/card.css';
+@import './blocks/contact.css';
+@import './components/about-page/about-page.css';
+@import './blocks/about-x.css';
+@import './components/about-page/about-skills/about-skills.css';
+@import './components/about-page/about-education/about-education.css';
+@import './components/projects-page/project-page.css';
+
+:root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-roboto-slab: 'Roboto Slab', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    position: relative;
+    font-family: var(--font-roboto); 
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    gap: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+#view-container {
+    width: 100%;
+}
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+    margin-top: 60px;
+    /* ¡LA CLAVE RESPONSIVE!*/
+    flex-wrap: wrap; 
+}
+
+.about-div, 
+.projects-div, 
+.blog-div {
+    display: flex;
+    flex-direction: column; /* Apila el texto debajo de la imagen */
+    align-items: center;    /* Centra ambos horizontalmente */
+    gap: 15px;              /* Espacio entre el icono y el texto */
+    cursor: pointer;        /* Cambia el cursor al de una "manita" */
+    transition: transform 0.2s ease-in-out; /* Prepara un efecto suave */
+}
+
+.about-div:hover, 
+.projects-div:hover, 
+.blog-div:hover {
+    transform: scale(1.08); 
+}
+
+.icon-main {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Para el efecto hover */
+}
+
+.icon-main:hover {
+    transform: scale(1.05) translateY(-30px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+}
+
+about-page, 
+about-skills, 
+about-education, 
+about-experience, 
+about-hobbies {
+    display: block;
+    width: 100%;
+}
+
+/* 5. Magia Responsive: Ajustes para tablets y celulares */
+@media (max-width: 768px) {
+    .main-menu {
+        gap: 30px; /* Reducimos el espacio entre elementos en móviles */
+    }
+    
+    .main-menu img {
+        width: 130px; /* Hacemos los iconos más pequeños */
+        height: 130px;
+    }
+}

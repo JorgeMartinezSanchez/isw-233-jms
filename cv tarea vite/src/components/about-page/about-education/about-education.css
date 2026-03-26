@@ -1,0 +1,5 @@
+.abt-period {
+    font-size: clamp(1px, 22px, 44px);
+    font-weight: 300;
+    color: #888;
+}
