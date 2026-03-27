@@ -1,0 +1,80 @@
+.abt-skills-section-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: white;
+    transition: box-shadow 0.2s ease;
+    min-width: 0;
+}
+
+.languages-array {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.language progress {
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.language progress::-webkit-progress-bar {
+    background-color: #f0f0f0; 
+}
+
+.language progress::-webkit-progress-value {
+    background-color: rgb(58, 144, 215); 
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.language progress::-moz-progress-bar {
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.language img {
+    border-radius: 10px;
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain;
+}
+
+.percentage {
+    font-weight: 300;
+    min-width: 45px;
+    text-align: right;
+    color: #1a1a1a;
+}
+
+
+
+.fw-array{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+}
+
+.fw-array img{
+    border-radius: 10px;
+    width: 140px !important;
+    height: 140px !important;
+}
