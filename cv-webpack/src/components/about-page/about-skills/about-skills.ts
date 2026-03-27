@@ -6,35 +6,16 @@ class AboutSkills extends HTMLElement {
     this.innerHTML = `
       <article class="abt-article">
         <h1 class="abt-title">Skills</h1>
-        <div class="abt-skills-section-card">
-          <h2 class="skill-title">Programming Languages</h2>
-          <div class="languages-array">
-            ${LanguageProgressTemplate(language)}
-          </div>
-        </div>
-
-        <div class="abt-skills-section-card">
-          <h2 class="skill-title">Frameworks</h2>
-          <div class="framework-array">
-            <h3>Database</h3>
-            <div class="fw-array">
-              ${FrameworkTemplate(frameworks.databases)}
-            </div>
-          </div>
-
-          <div class="framework-array">
-            <h3>Front-End</h3>
-            <div class="fw-array">
-              ${FrameworkTemplate(frameworks.frontend)}
-            </div>
-          </div>
-
-          <div class="framework-array">
-            <h3>Back-End</h3>
-            <div class="fw-array">
-              $${FrameworkTemplate(frameworks.backend)}
-            </div>
-          </div>
+        <div>
+          <h2>Programming Languages</h2>
+          <ul>
+            <li>C++ (82%)</li>
+            <li>Python (73%)</li>
+            <li>C# (90%)</li>
+            <li>TypeScript (85%)</li>
+            <li>JavaScript (30%)</li>
+            <li>SQL (86%)</li>
+          </ul>
         </div>
       </article>
     `;

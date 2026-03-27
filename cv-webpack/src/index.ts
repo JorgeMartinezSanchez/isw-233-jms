@@ -1,14 +1,14 @@
 // Importar todos los componentes que se van a usar
-import './components/home-page.ts';
-import './components/about-page/about-page.ts';
-import './components/blog-page.ts';
-import './components/projects-page/projects-page.ts';
+import './components/home-page';
+import './components/about-page/about-page';
+import './components/blog-page';
+import './components/projects-page/projects-page';
 
 // También importar los subcomponentes que se cargan dinámicamente
-import './components/about-page/about-education/about-education.ts';
-import './components/about-page/about-expierence/about-experience.ts';
-import './components/about-page/about-skills/about-skills.ts';
-import './components/about-page/about-hobbies/about-hobbies.ts';
+import './components/about-page/about-education/about-education';
+import './components/about-page/about-expierence/about-experience';
+import './components/about-page/about-skills/about-skills';
+import './components/about-page/about-hobbies/about-hobbies';
 
 const viewContainer = document.getElementById('view-container');
 
